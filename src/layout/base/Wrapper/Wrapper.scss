@@ -1,0 +1,19 @@
+.wrapper {
+  $--bs-body-color: #f8f8f9;
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  padding-left: 0;
+
+  background-color: var(--background-color);
+
+  @media (min-width: 990px) {
+    padding-left: 200px;
+  }
+
+  transition: all 400ms ease-in;
+}

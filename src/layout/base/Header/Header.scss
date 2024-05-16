@@ -1,0 +1,24 @@
+// main.scss
+@import '../../../scss//core/variables';
+
+.header {
+  $header-x-padding: 0.75rem;
+  $header-y-padding: 0.90rem;
+
+  background-color: var(--primary-color);
+  padding: $header-y-padding $header-x-padding;
+
+  border-bottom: 1px solid #e8e7ec;
+  box-shadow: 0 1px 0 rgba(232, 231, 236, 0.5);
+
+  font-family: 'Roboto', sans-serif;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    margin-left: 200px;
+  }
+}

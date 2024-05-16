@@ -1,0 +1,93 @@
+// /* styles.css */
+// .draggable-sidebar {
+//   position: fixed;
+//   bottom: 0;
+//   top: 0;
+//   right: 0;
+//   width: 300px; /* Начальная ширина */
+//   height: 100vh; /* Высота панели */
+//   background-color: var(--primary-color); /* Цвет фона */
+//   padding: 20px; /* Отступы */
+//   box-sizing: border-box; /* Включение отступов в общую ширину */
+//   overflow-y: auto; /* Скролл по вертикали, если контент превышает высоту панели */
+//   cursor: ew-resize; /* Изменение курсора при наведении на край панели */
+//   transition: width 0.1s ease; /* Анимация изменения ширины */
+// }
+
+// ResizableSidebar.scss
+.module {
+  top: 0;
+  right: 0;
+  bottom: o;
+  width: 333px;
+  height: 100%;
+  overflow-x: hidden;
+  position: absolute;
+  background-color: #eee;
+}
+
+// .resizer {
+//   width: 3px;
+//   top: 0;
+//   right: 0;
+//   cursor: col-resize;
+//   height: 100%;
+//   position: absolute;
+//   background-color: #42b362;
+// }
+
+// .header {
+//   padding: 22px 11px;
+//   background-color: #fff;
+// }
+
+// .header h3 {
+//   color: #2e2e9b;
+// }
+
+// .header h3,
+// ul li {
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// }
+
+// ul {
+//   padding: 11px 0px;
+//   list-style: none;
+// }
+
+// ul li {
+//   cursor: pointer;
+//   font-size: 14px;
+//   font-weight: 500;
+//   padding: 5px 11px;
+// }
+
+// ul li:hover {
+//   background-color: #fffbfb;
+// }
+
+
+// .rs-content {
+//   flex-grow: 1;
+//   padding: 3% 22px;
+//   text-align: center;
+//   background-color: #555;
+// }
+
+// h1 {
+//   color: #fff;
+//   font-weight: 500;
+//   text-transform: uppercase;
+// }
+
+
+.resizer {
+  position: absolute;
+  bottom: 0;
+  width: 3px;
+  cursor: col-resize;
+  height: 100%;
+  background-color: var(--primary-color);
+}

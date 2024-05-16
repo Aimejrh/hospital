@@ -1,0 +1,19 @@
+.footer {
+  $footer-bg-color: #ffffff;
+  $footer-color: #2e314a;
+  $footer-x-padding: 0.5rem;
+  $footer-y-padding: 0.5rem;
+
+  background-color: $footer-bg-color;
+  padding: $footer-y-padding $footer-x-padding;
+
+  transition: 0.4s;
+
+  border-top: 1px solid #e8e7ec;
+
+  font-family: 'Roboto', sans-serif;
+
+  bottom: 0;
+  right: 0;
+  left: 0;
+}

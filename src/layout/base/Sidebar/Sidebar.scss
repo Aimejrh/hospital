@@ -1,0 +1,147 @@
+.sidebar {
+  $sidebar-bg-color: #161a1e;
+  $sidebar-color: #ffffffe0;
+  $sidebar-scroll-color: rgb(138, 136, 136);
+  $sidebar-menu-compact-bg-color: #4c4354;
+  $sidebar-menu-compact-br-color: #bf8eea;
+  $sidebar-color-a: rgb(222, 220, 220);
+  $opacity: 0.6;
+
+  background-color: var( --primary-color);
+  color: $sidebar-color;
+
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  transform: translate(-100%);
+  transition: all 400ms ease-in;
+
+  .SimpleBar {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  .simplebar-scrollbar::before,
+  .simplebar-scrollbar::after {
+    background-color: var(--background-color) !important;
+    width: 4px;
+  }
+
+  @media (min-width: 990px) {
+    transform: translate(0);
+    color: $sidebar-color;
+  }
+  .logo{
+    background-color: var(--background-color);
+    border-radius: 10px;
+    width: 67px;
+    color: var(--primary-color);
+    display: none;
+    position: absolute;
+    transition: all 2s ease-in-out;
+  }
+
+  &.compact {
+    width: 75px;
+
+    & + .wrapper {
+      padding-left: 75px;
+    }
+
+
+    .sidebar_menu {
+      a {
+        pointer-events: none;
+      }
+      .menu_text {
+        transition: all 0.5s ease-in !important;
+        opacity: 0;
+      }
+      .logo{
+        display: flex !important;
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--background-color);
+        transition: all 0.4s ease-in-out;
+        background-color: var(--primary-color);
+      }
+      .HiOutlineChevronUp {
+        display: none;
+      }
+      .menu_compact_options {
+        display: none;
+      }
+    }
+  }
+
+  .menu_compact {
+    background: var(--background-color);
+    border-left: 3.5px solid $sidebar-menu-compact-br-color !important;
+  }
+  .menu_icons {
+    font-size: 26px;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    transition: all 300ms ease-in;
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 10px 23px;
+      gap: 18px;
+      transition: all 100ms ease-in;
+      color: $sidebar-color-a;
+      text-decoration: none;
+      font-family: 'Roboto';
+      letter-spacing: 0.8px;
+      font-weight: 400;
+      font-size: 0.875rem;
+
+      &:hover {
+        transition: all 200ms ease-in;
+        color: $sidebar-color;
+      }
+    }
+    h3 {
+      color: $sidebar-color-a;
+      opacity: $opacity;
+      transition: all 200ms ease-in;
+      font-family: 'Roboto';
+      font-size: 11px;
+      line-height: 1.2;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+
+  &.open {
+    transform: translate(0);
+  }
+
+  .menu_compact_options {
+    padding: 10px 28px;
+    display: none;
+
+    &.open {
+      display: flex;
+      flex-direction: column;
+    }
+    transition: all 300ms ease-in;
+  }
+
+  .transform {
+    transform: rotate(180deg);
+  }
+  .HiOutlineChevronUp {
+    margin-left: 75px;
+  }
+}
